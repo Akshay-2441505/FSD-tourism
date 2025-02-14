@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tourism xmlns="http://example.com/tourism" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://example.com/tourism tourism.xsd">
+    <destinations>
+        <destination>
+            <name>Taj Mahal</name>
+            <type>Historical</type>
+            <entryFee>50</entryFee>
+        </destination>
+        <destination>
+            <name>Goa Beach</name>
+            <type>Beach</type>
+            <entryFee>0</entryFee> 
+        </destination>
+        <destination>
+            <name>Himalayas</name>
+            <type>Adventure</type>
+            <entryFee>1000</entryFee>
+        </destination>
+        <destination>
+            <name>Varanasi</name>
+            <type>Spiritual</type>
+            <entryFee>0</entryFee> 
+        </destination>
+        <destination>
+            <name>Ranthambore National Park</name>
+            <type>Wildlife Safari</type>
+            <entryFee>500</entryFee>
+        </destination>
+    </destinations>
+    <packages>
+        <package>
+            <name>Golden Triangle Tour</name>
+            <duration>5</duration>
+            <price>25000</price>
+        </package>
+        <package>
+            <name>Kerala Backwaters</name>
+            <duration>7</duration>
+            <price>40000</price>
+        </package>
+        <package>
+            <name>Andaman Islands</name>
+            <duration>5</duration>
+            <price>30000</price>
+        </package>
+        <package>
+            <name>North India Adventure Tour</name>
+            <duration>8</duration>
+            <price>35000</price>
+        </package>
+        <package>
+            <name>South India Cultural Tour</name>
+            <duration>10</duration>
+            <price>45000</price>
+        </package>
+    </packages>
+</tourism>

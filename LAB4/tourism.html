@@ -1,0 +1,226 @@
+<html xmlns:t="http://example.com/tourism">
+   <head>
+      <title>Booking.com</title>
+      <style>
+         body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+         }
+         h1, h2, h4 {
+            text-align: center;
+         }
+         h1 {
+            font-size: 36px;
+            color: gold;
+         }
+         h2 {
+            font-size: 28px;
+            color: #c9c7c7;
+         }
+         h4 {
+            font-size: 20px;
+            color: blanchedalmond;
+         }
+         .card {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            display: flex;
+            flex-direction: column;
+         }
+         .card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.5); 
+            background-color: #333333; 
+         }
+         .card h3 {
+            color: gold;
+            font-size: 24px;
+            margin-bottom: 10px;
+         }
+         .card p {
+            font-size: 18px;
+         }
+         .highlight {
+            font-size: 20px;
+            color: #f8a700;
+            font-weight: bold;
+         }
+         body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        color: white;
+    }
+    h2 {
+        text-align: center;
+        color: gold;
+        font-size: 28px;
+    }
+
+    table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #333;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background-color: gold;
+        color: black;
+        font-size: 18px;
+    }
+
+    td {
+        font-size: 16px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #444;
+    }
+
+    tr:hover {
+        background-color: #555;
+    }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1>Booking.com</h1>
+         <h4>Explore Destinations and Packages</h4>
+         <h2>Destinations</h2>
+         <div class="card">
+            <h3>Taj Mahal</h3>
+            <p>Type: Historical</p>
+            <p class="highlight">Entry Fee: ₹50</p>
+         </div>
+         <div class="card">
+            <h3>Goa Beach</h3>
+            <p>Type: Beach</p>
+            <p class="highlight">Entry Fee: Free</p>
+         </div>
+         <div class="card">
+            <h3>Himalayas</h3>
+            <p>Type: Adventure</p>
+            <p class="highlight">Entry Fee: ₹1000</p>
+         </div>
+         <div class="card">
+            <h3>Varanasi</h3>
+            <p>Type: Spiritual</p>
+            <p class="highlight">Entry Fee: Free</p>
+         </div>
+         <div class="card">
+            <h3>Ranthambore National Park</h3>
+            <p>Type: Wildlife Safari</p>
+            <p class="highlight">Entry Fee: ₹500</p>
+         </div>
+         <h2>Packages</h2>
+         <div class="card">
+            <h3>Golden Triangle Tour</h3>
+            <p>Duration: 5 Days</p>
+            <p class="highlight">Price: ₹25,000</p>
+         </div>
+         <div class="card">
+            <h3>Kerala Backwaters</h3>
+            <p>Duration: 7 Days</p>
+            <p class="highlight">Price: ₹40,000</p>
+         </div>
+         <div class="card">
+            <h3>Andaman Islands</h3>
+            <p>Duration: 5 Days</p>
+            <p class="highlight">Price: ₹30,000</p>
+         </div>
+         <div class="card">
+            <h3>North India Adventure Tour</h3>
+            <p>Duration: 8 Days</p>
+            <p class="highlight">Price: ₹35,000</p>
+         </div>
+         <div class="card">
+            <h3>South India Cultural Tour</h3>
+            <p>Duration: 10 Days</p>
+            <p class="highlight">Price: ₹45,000</p>
+         </div>
+      </div>
+       <!--<h2>Destinations in Table Format</h2>
+         <table>
+            <tr>
+               <th>Name</th>
+               <th>Type</th>
+               <th>Entry Fee</th>
+            </tr>
+            <tr>
+               <td>Taj Mahal</td>
+               <td>Historical</td>
+               <td>₹50</td>
+            </tr>
+            <tr>
+               <td>Goa Beach</td>
+               <td>Beach</td>
+               <td>Free</td>
+            </tr>
+            <tr>
+               <td>Himalayas</td>
+               <td>Adventure</td>
+               <td>₹1000</td>
+            </tr>
+            <tr>
+               <td>Varanasi</td>
+               <td>Spiritual</td>
+               <td>Free</td>
+            </tr>
+            <tr>
+               <td>Ranthambore National Park</td>
+               <td>Wildlife Safari</td>
+               <td>₹500</td>
+            </tr>
+         </table>
+
+         <h2>Packages in Table Format</h2>
+         <table>
+            <tr>
+               <th>Name</th>
+               <th>Duration (Days)</th>
+               <th>Price</th>
+            </tr>
+            <tr>
+               <td>Golden Triangle Tour</td>
+               <td>5</td>
+               <td>₹25,000</td>
+            </tr>
+            <tr>
+               <td>Kerala Backwaters</td>
+               <td>7</td>
+               <td>₹40,000</td>
+            </tr>
+            <tr>
+               <td>Andaman Islands</td>
+               <td>5</td>
+               <td>₹30,000</td>
+            </tr>
+            <tr>
+               <td>North India Adventure Tour</td>
+               <td>8</td>
+               <td>₹35,000</td>
+            </tr>
+            <tr>
+               <td>South India Cultural Tour (Tamil Nadu, Kerala)</td>
+               <td>10</td>
+               <td>₹45,000</td>
+            </tr>
+         </table>
+      </div>-->
+   </body>
+</html>

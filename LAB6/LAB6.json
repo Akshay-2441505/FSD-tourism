@@ -1,0 +1,50 @@
+{
+    "places": [
+      { 
+        "id": 1,
+        "name": "Taj Mahal",
+        "location": "Agra",
+        "hotel_price": 2500,
+        "package": "2 Days - ₹5000 (Hotel + Sightseeing)",
+        "rating": 4.9,
+        "available": true
+      },
+      { 
+        "id": 2,
+        "name": "Golden Temple",
+        "location": "Amritsar",
+        "hotel_price": 1800,
+        "package": "3 Days - ₹4500 (Hotel + Food)",
+        "rating": 5.0,
+        "available": true
+      },
+      { 
+        "id": 3,
+        "name": "Jaipur Palace",
+        "location": "Jaipur",
+        "hotel_price": 3000,
+        "package": "2 Days - ₹6000 (Hotel + Travel)",
+        "rating": 4.7,
+        "available": true
+      },
+      { 
+        "id": 4,
+        "name": "Goa Beach Resort",
+        "location": "Goa",
+        "hotel_price": 4000,
+        "package": "5 Days - ₹15000 (Beach + Adventure)",
+        "rating": 4.8,
+        "available": false
+      },
+      { 
+        "id": 5,
+        "name": "Kashmir Valley",
+        "location": "Kashmir",
+        "hotel_price": 3500,
+        "package": "4 Days - ₹12000 (Houseboat + Trekking)",
+        "rating": 4.9,
+        "available": true
+      }
+    ]
+  }
+      

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tourismApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourism Booking</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="TourismController">
+
+    <h2>Tourism Packages</h2>
+    
+    <input type="text" ng-model="searchText" placeholder="Search destinations...">
+    
+    <ul>
+        <li ng-repeat="place in places | filter: searchText | orderBy: 'name'">
+            <h3>{{ place.name | uppercase }}</h3>
+            <p><strong>Location:</strong> {{ place.location }}</p>
+            <p><strong>Hotel Price:</strong> {{ place.hotel_price | currency: '₹' }}</p>
+            <p><strong>Package:</strong> {{ place.package }}</p>
+            <p><strong>Rating:</strong> {{ place.rating }}</p>
+            <p><strong>Available:</strong> <span ng-if="place.available">Yes</span><span ng-if="!place.available">No</span></p>
+            <button ng-if="place.available" ng-click="bookTour(place)">Book Now</button>
+        </li>
+    </ul>
+
+    <h3>{{ bookingMessage }}</h3>
+
+</body>
+</html>

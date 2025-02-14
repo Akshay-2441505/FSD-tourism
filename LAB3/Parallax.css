@@ -1,0 +1,118 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.parallax1 {
+  background-image: url("para1.jpg");
+}
+
+.parallax2 {
+  background-image: url("para2.jpg");
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(8, 8, 8);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+.overlay1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(249, 247, 247);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+}
+.overlay1 h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.overlay1 p {
+  font-size: 1.2rem;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #444;
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.navbar-brand {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000 !important;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(14, 14, 14) !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #6be3e9 !important;
+  font-weight: bold;
+}
+
+footer {
+  color: rgb(11, 11, 11);
+  text-align: center;
+  padding: 1rem;
+  background: #f4f4f4;
+  border-top: 1px solid #ddd;
+}
