@@ -1,0 +1,75 @@
+body {
+    background-image: url(Background9.jpeg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    margin-top:10px;
+    padding: 0;
+}
+
+header {
+    background:  #2e1ac3ad;
+    margin-bottom: 60px;
+    padding: 20px;
+    color: #1a1818;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+}
+form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    width: 30%;
+    margin: auto;
+}
+form:hover{
+    transform:scale(1.2) translateZ(20px);
+    transition-duration:1.5s;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #0c0c0c;
+}
+input[type="email"],
+input[type="password"] {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #004aad;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="SUBMIT"],
+input[type="reset"] {
+    background:#2e1ac3ad;
+    color: #f6f4f4;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+input[type="SUBMIT"]:hover,
+input[type="reset"]:hover {
+    background:  #0f0f0e;
+    transition-duration: 0.5s;
+}
+input[type="SUBMIT"]:active,
+input[type="reset"]:active {
+    background: #2e1ac3ad;
+}
+footer{
+    margin-top: 60px;
+}

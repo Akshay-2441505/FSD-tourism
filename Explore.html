@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="explore.css" type="text/css">
+</head>
+<body>
+    <header>
+    <h1>Explore India</h1>
+    </header>
+    
+    <canvas id="barChart" width="800" height="400"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const touristData = {
+            labels: ["Taj Mahal, Agra", "Red Fort, Delhi", "Qutub Minar, Delhi", "Sun Temple, Konark", "Mamallapuram, Tamil Nadu"],
+            datasets: [{
+                label: "Visitors (in Millions)",
+                data: [3.29, 1.32, 1.16, 0.43, 0.14],
+                backgroundColor: ["#3498db", "#2ecc71", "#e74c3c", "#f1c40f", "#9b59b6"],
+                borderColor: ["#2980b9", "#27ae60", "#c0392b", "#f39c12", "#8e44ad"],
+                borderWidth: 1
+            }]
+        };
+
+        
+        const config = {
+            type: "bar",
+            data: touristData,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: "top",
+                    },
+                    tooltip: {
+                        enabled: true,
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            font: {
+                                size: 14
+                            },
+                            color: "#333"
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 0.5,
+                            font: {
+                                size: 14
+                            },
+                            color: "#333"
+                        }
+                    }
+                }
+            }
+        };
+
+        
+        const ctx = document.getElementById("barChart").getContext("2d");
+        new Chart(ctx, config);
+    </script>
+    <hr/>
+    <center>
+<br><br>
+    <button id="getLocation">Get My Location</button>
+    <div id="location"></div>
+    <iframe id="mapFrame" style="display: none;"></iframe>
+    <script>
+        document.getElementById("getLocation").addEventListener("click", () => {
+            const locationDiv = document.getElementById("location");
+            const mapFrame = document.getElementById("mapFrame");
+            if (navigator.geolocation) {
+                locationDiv.textContent = "Locating you...";
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+                        locationDiv.innerHTML = `Latitude: ${latitude}<br>Longitude: ${longitude}`;
+                        mapFrame.style.display = "block";
+                        mapFrame.src = `https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.05},${latitude - 0.05},${longitude + 0.05},${latitude + 0.05}&layer=mapnik&marker=${latitude},${longitude}`;
+                    },
+                    (error) => {
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                locationDiv.textContent = "User denied the request for Geolocation.";
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                locationDiv.textContent = "Location information is unavailable.";
+                                break;
+                            case error.TIMEOUT:
+                                locationDiv.textContent = "The request to get user location timed out.";
+                                break;
+                            case error.UNKNOWN_ERROR:
+                                locationDiv.textContent = "An unknown error occurred.";
+                                break;
+                        }
+                    }
+                );
+            } else {
+                locationDiv.textContent = "Geolocation is not supported by your browser.";
+            }
+        });
+    </script>
+    </center>
+</body>
+</html>

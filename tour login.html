@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="tour login.css" type="text/css">
+    </head>
+    <body>
+    <header>
+        Log in
+    </header>
+    <center>
+    <form action="#" onsubmit="validateForm()">
+    <label><i class="fa-solid fa-envelope"></i></label><input type="email" name="email" placeholder="Enter your email" required>
+<br>      
+    <label><i class="fa-solid fa-lock"></i></label>  <input type="password" name="password" placeholder="Enter your password" required>
+    <br><br><br>
+    <input type="SUBMIT"  name="SUBMIT">
+    <INPUT type="reset" ></form></center>
+    <script>
+    function validateForm() 
+    {
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+    emailError.textContent = '';
+    passwordError.textContent = '';
+    let valid = true;
+    if (!email) 
+    {
+        emailError.textContent = 'Email is required.';
+        valid = false;
+    } else if (!isValidEmail(email)) 
+    {
+        emailError.textContent = 'Invalid email format.';
+        valid = false;
+    }
+    if (!password) 
+    {
+        passwordError.textContent = 'Password is required.';
+        valid = false;
+    } else if (password.length < 6)
+    {
+        passwordError.textContent = 'Password must be at least 6 characters long.';
+        valid = false;
+    }
+    return valid;
+}
+function isValidEmail(email) 
+{
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailPattern.test(email);
+}
+            </script>
+            <footer><center><p>Copyright © 1996–2024 Booking.com™. All rights reserved</p></center>
+            </footer>
+            </body>
+            </html>
